@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 export default function HomePage() {
 
 
-    const { movies, setMovies } = useState([]);
+    const [movies, setMovies] = useState([]);
 
     //fetchIndex for movies
     const fetchMovies = () => {
@@ -19,6 +19,7 @@ export default function HomePage() {
             .catch((err) => {
                 console.log(err);
             });
+
     };
 
     //funzione per rendering delle card dei libri nell'html
@@ -46,5 +47,5 @@ export default function HomePage() {
     )
 
 
-    
+
 }

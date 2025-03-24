@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import DefaultLayout from './layouts/DefaultLayout'
 import HomePage from './pages/HomePage'
-// import MoviePage from './pages/MoviePage'
+import MoviePage from './pages/MoviePage'
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           < Route Component={DefaultLayout}>
 
             <Route path='/' Component={HomePage} />
-            {/* <Route path='/moovies/:id' Component={MoviePage} /> */}
+            <Route path='/movies/:id' Component={MoviePage} />
 
           </Route>
         </Routes>

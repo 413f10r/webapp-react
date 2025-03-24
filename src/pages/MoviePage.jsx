@@ -12,15 +12,15 @@ export default function MoviePage() {
     const { id } = useParams(); //2
 
     //Crreazione varibaile reattiva
-    const [movie, setMovie] = useState({});
+   const [movie, setMovie] = useState({});
 
     //Chiamata fetch Show
     const fetchMovie = () => {
         axios
-            .get(`http://localhost:3000/mocvies/${id}`)
+            .get(`http://localhost:3000/movies/${id}`)
             .then((res) => setMovie(res.data))
             .catch((error) => console.log(error));
-    };
+    }; 
 
     //Invocazione chiamata al caricamento del componente in pagina
     useEffect(fetchMovie, [id]);
